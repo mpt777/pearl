@@ -6,6 +6,9 @@ from states import *
 from ws import WS
 
 BOX_SIZE = 20
+TOLERANCE = 30
+
+
 
 
 class Pearl:
@@ -77,8 +80,9 @@ class PearlSorter:
         self.change_state(SortState.INIT)
         self.reference_color = []
         self.box_color = (255, 255, 255)
-        self.tolerance = 20
+        self.tolerance = TOLERANCE
         self.key = None
+        self.matched = 0
 
 
 
